@@ -66,6 +66,13 @@ namespace EventProject
             });
 
             app.UseHttpsRedirection();
+            app.UseCors(builder =>
+            {
+                builder.AllowAnyOrigin()
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+            });
+            
             app.UseMvc();
         }
     }
