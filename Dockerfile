@@ -1,8 +1,9 @@
 FROM microsoft/dotnet:2.2-sdk AS build-env
-WORKDIR /app
+WORKDIR /EventProject
 
 # Copy csproj and restore as distinct layers
-COPY ./EventProject/EventProject.csproj ./EventProject
+#COPY ./EventProject/EventProject.csproj ./EventProject
+COPY *.csproj ./
 RUN dotnet restore
 
 # Copy everything else and build
