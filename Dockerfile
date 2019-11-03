@@ -1,16 +1,22 @@
-FROM microsoft/dotnet:2.2-sdk AS build-env
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
 WORKDIR /app
-
-# Copy csproj and restore as distinct layers
-COPY ./EventProject/EventProject.csproj
+COPY EventProject/*.csproj ./
 RUN dotnet restore
 
-# Copy everything else and build
+#Copy everything else and build
 COPY . ./
 RUN dotnet publish -c Release -o out
 
 # Build runtime image
-FROM microsoft/dotnet:2.2-aspnetcore-runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
 WORKDIR /app
-COPY --from=build-env /app/out .
-CMD dotnet AspNetCoreHerokuDocker.dll
+COPY --from=build /app/EventProject/out ./
+
+LABEL io.k8s.display-name="app name" \
+      io.k8s.description="container description..." \
+      io.openshift.expose-services="8080:http"
+
+EXPOSE 8080
+ENV ASPNETCORE_URLS=http://*:8080
+
+ENTRYPOINT ["dotnet", "EventProject.dll"]
