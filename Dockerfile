@@ -1,7 +1,7 @@
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
 WORKDIR /src
 COPY EventProject/*.csproj ./EventProject/
-RUN dotnet restore "./EventProject.csproj"
+RUN dotnet restore
 COPY . .
 RUN dotnet build "EventProject.csproj" -c Release -o /app
 
