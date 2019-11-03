@@ -10,7 +10,7 @@ RUN dotnet publish -c Release -o out
 # Build runtime image
 FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
 WORKDIR /app
-COPY --from=build /app/out ./
+COPY --from=build /app/out .
 ENTRYPOINT ["dotnet", "EventProject.dll"]
 
 # # FROM microsoft/dotnet:2.2-sdk AS build-env
