@@ -1,19 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/.Rider2019.2/system/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/.Rider2019.2/system/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_EventProject.-922123241.00" t="ExcludeRecursive" />
-    <e p="$PROJECT_DIR$" t="IncludeFlat">
+    <e p="C:\Users\Oliver\.Rider2018.3\config\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\Oliver\.Rider2018.3\config\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\Oliver\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Oliver\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_EventProject.-520883314.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Oliver\RiderProjects\EventProjectAPI" t="IncludeFlat">
       <e p="EventProject" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="EventController.cs" t="Include" />
           <e p="ParticipantController.cs" t="Include" />
         </e>
+        <e p="Dockerfile" t="Include" />
         <e p="EventProject.csproj" t="IncludeRecursive" />
         <e p="Models" t="Include">
           <e p="Event.cs" t="Include" />
           <e p="EventDatabaseSettings.cs" t="Include" />
           <e p="Participant.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="EventProject.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
         </e>
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
@@ -24,17 +37,6 @@
           <e p="ParticipantService.cs" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
-        <e p="appsettings.Development.json" t="Include" />
-        <e p="appsettings.json" t="Include" />
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netcoreapp2.2" t="Include">
-              <e p="EventProject.AssemblyInfo.cs" t="Include" />
-              <e p="EventProject.RazorAssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
       </e>
       <e p="EventProject.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />

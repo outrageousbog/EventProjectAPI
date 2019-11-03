@@ -38,9 +38,24 @@ namespace EventProject.Controllers
         public ActionResult<Event> Create(Event eventTmp)
         {
             _eventService.Create(eventTmp);
-            return CreatedAtRoute("GetEvent", new {id = eventTmp.Id.ToString()});
+            return CreatedAtRoute("GetEvent",
+                new {id = eventTmp.Id},
+                eventTmp);
         }
-        
-        
+
+        [HttpDelete("{id:length(24)}")]
+        public IActionResult Delete(string id)
+        {
+            var eventTmp = _eventService.Get(id);
+
+            if (eventTmp == null)
+            {
+                return NotFound();
+            }
+
+            _eventService.Remove(eventTmp.Id);
+
+            return NoContent();
+        }
     }
 }

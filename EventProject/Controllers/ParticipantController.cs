@@ -37,7 +37,9 @@ namespace EventProject.Controllers
         public ActionResult<Participant> Create(Participant participantTmp)
         {
             _participantService.Create(participantTmp);
-            return CreatedAtRoute("GetParticipant", new {id = participantTmp.Id.ToString()});
+            return CreatedAtRoute("GetParticipant", 
+                new {id = participantTmp.Id}, 
+                participantTmp);
         }
     }
 }
