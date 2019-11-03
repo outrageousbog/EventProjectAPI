@@ -3,7 +3,7 @@ WORKDIR /EventProject
 
 # Copy csproj and restore as distinct layers
 #COPY ./EventProject/EventProject.csproj ./EventProject
-COPY *.csproj ./
+COPY *.csproj .
 RUN dotnet restore
 
 # Copy everything else and build
