@@ -14,7 +14,6 @@
           <e p="EventController.cs" t="Include" />
           <e p="ParticipantController.cs" t="Include" />
         </e>
-        <e p="Dockerfile" t="Include" />
         <e p="EventProject.csproj" t="IncludeRecursive" />
         <e p="Models" t="Include">
           <e p="Event.cs" t="Include" />
